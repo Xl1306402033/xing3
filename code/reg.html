@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>魅力惠登录界面</title>
+		<link rel="stylesheet" href="css/commen.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+	</head>
+	<body>
+		<div id="login-wrap">
+			<div id="login">
+				<div id="head"><img src="img/logo.png" /></div>
+				
+
+				<div id="content">
+					<div class="login-main">
+						<div class="hydl_regsiter">
+							<h2>免费注册</h2>
+							<span>已注册？
+								<a href="#">登录</a>
+							</span>
+						</div>
+						<div class="newPeople">
+							<p><span>新客专享 50元现金券＋2次免运</span></p>
+						</div>
+						<div class="hydl_loginbar">
+							<form>
+								<ul>
+									<li>
+										<span>账号名：</span>
+										<input type="text" name="username" value="" placeholder="手机号/邮箱" />
+										<p id="Act_error-1" class="error"></p>
+									</li>
+									<li>
+										<span>密码：</span>
+										<input type="password" name="password" value="" placeholder="请输入6-20个字符" />
+										<p id="Act_error-2" class="error"></p>
+									</li>
+									<li>
+										<span>确认密码：</span>
+										<input type="password" name="repassword" value="" />
+										<p id="Act_error-3" class="error"></p>
+									</li>
+									<li>
+										<span>验证码：</span>
+										<input class="input-1" type="text" id ="Txtidcode"  value="" /><span id="idcode" class="input-1 input-2" type="button"></span>
+										<p id="Act_error-4" class="error"></p>
+									</li>
+									<li>
+										<span>短信验证码：</span>
+										<input class="input-1" type="text" name="tyzm" value="" /><input class="input-1 input-2" type="button" name="yzm" value="获取验证码" />
+										<p id="Act_error-5" class="error"></p>
+									</li>
+								</ul>
+								<div class="hydl_btn">
+                					<a id="submitBtn" href="#" style="cursor: pointer;">立即注册</a>
+                				</div>
+							</form>	
+						</div>
+						<div class="tiaokuan">
+							<p>点击立即注册即表示同意魅力惠<a><span>使用条款</span></a></p>
+						</div>
+						<div class="youjian">
+							<p><input type="checkbox"/><span>您将收到魅力惠每日最新上线邮件</span></p>
+						</div>
+						<div class="xian"></div>
+						<div class="erweima">
+                    		<img src="http://cdn11.mei.com/images/login/imges_saomiao.jpg">
+                  			<p>扫描二维码或发送短信<br>“MLH”到“12114”<br>下载APP尊享独家优惠</p>
+                		</div>
+					</div>
+				</div>
+
+
+				<div id="footer-link">
+				<ul>
+					<li><span><img src="img/love.gif"/></span><p>100%品牌授权正品</p></li>
+					<li><span><img src="img/bus.gif"/></span><p>满688免邮费</p></li>
+					<li><span><img src="img/day.gif"/></span><p>7天无条件退换货</p></li>
+					<li><span><img src="img/bi.gif"/></span><p>超值折扣</p></li>
+					<li><span><img src="img/zh.gif"/></span><p>9点限时闪购</p></li>
+					<li><span><img src="img/phone.gif"/></span><p>400-664-6698</p></li>
+				</ul>
+				<p class="footer_copyright">COPYRIGHT©2016 杭州魅俪信息技术有限公司版权所有 &nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1</p>
+				</div>
+			
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="js/reg.js" ></script>
+		<script src="js/jquery.idcode.js"></script>
+		<script>
+		    $.idcode.setCode();   //加载生成验证码方法
+		    $("#Txtidcode").blur(function(){
+		        var IsBy = $.idcode.validateCode();//调用返回值，返回值结果为true或者false
+		        if(!IsBy){
+		           $("#Act_error-4").html("验证码错误!");
+		        }else{
+		           $("#Act_error-4").html("");
+		        }
+		    })
+		</script>
+	</body>
+</html>
+

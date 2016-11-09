@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css1.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/SHOPlist.css"/>
+	    <script type="text/javascript" src = "js/Mquery.js"></script>
+	    <script type="text/javascript" src = "js/Mquery_animate.js"></script>
+	    <script type="text/javascript" src = "js/perfect_startMove.js"></script>
+	   
+	    <script src="js/jquery-1.11.3.js"></script>
+	     <script type="text/javascript" src = "js/jquery.cookie.js"> </script>
+	    <!--导航josn-->
+    <script type="text/javascript">
+        window.onload = function(){
+        	window.onscroll = function(){
+        		var nav = document.getElementById("header_bottom");
+        		var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+	        	console.log(oTop);
+	        	if(oTop >= 120){
+	        		nav.style.position = "fixed";
+	        		nav.style.left = 0;
+	        		nav.style.top = 0;
+	        	}else{
+	        		nav.style.position = "relative";
+	        		//nav.style.top = "120px";
+	        	}
+        	}
+       	 }
+        $(function(){
+        	
+        	
+        	
+        	$("#header_bottom").find("li").hover(function(){
+        		$(this).find("div").css("display", "block");
+        		$(this).find(".mm").css("color", "red");
+        	},function(){
+        		$(this).find("div").css("display", "none");
+        		$(this).find(".mm").css("color", "white");
+        	}
+        	)
+        	
+        	$.ajax({
+        	type : "get",
+        	url : "json/1.json",
+        	success : function(data){
+        		
+        			for(var i = 0; i < data[0].child.length; i++){
+        			var $nav01 = $("<a href = '#'></a>");
+        			$nav01.html(data[0].child[i]);
+        			$("#div_nav1").find(".div01").append($nav01);
+        			}
+					$("#div_nav1").find(".div01").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav02 = $("<a href = '#'></a>");
+        			$nav02.html(data[1].child[i]);
+        			$("#div_nav2").find(".div03").append($nav02);
+        			}
+					$("#div_nav2").find(".div03").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav03 = $("<a href = '#'></a>");
+        			$nav03.html(data[2].child[i]);
+        			$("#div_nav3").find(".div05").append($nav03);
+        			}
+					$("#div_nav3").find(".div05").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav04 = $("<a href = '#'></a>");
+        			$nav04.html(data[3].child[i]);
+        			$("#div_nav4").find(".div07").append($nav04);
+        			}
+					$("#div_nav4").find(".div07").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav05 = $("<a href = '#'></a>");
+        			$nav05.html(data[4].child[i]);
+        			$("#div_nav5").find(".div09").append($nav05);
+        			}
+					$("#div_nav5").find(".div09").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav06 = $("<a href = '#'></a>");
+        			$nav06.html(data[5].child[i]);
+        			$("#div_nav6").find(".div11").append($nav06);
+        			}
+					$("#div_nav6").find(".div11").find("a").css("color", "black");
+        		}
+        	})
+        
+        })	
+    </script>
+    <!--定时器-->
+    <script>
+    	
+    </script>
+    
+    <!--商品列表-->
+    <script>
+    	$(function(){
+    			$.getJSON("json/shangping.json",function(data){
+				for(var i=0; i<data.length;i++){
+/*					if(i==2||i==5||i==8){
+						var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}else if(i==4||i==7 ||i==1){
+						var s=$('<li class="bott"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}	else{
+						var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}*/
+				var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span>'+data[i].price+'</span><span>元起</span></p></a></li>');
+				$(".ad0").append(s);
+			}
+		});
+		
+		$(".ad0").find("li").find("a").hover(function(){
+				$(this).find("img").animate({width:340,height: 200,marginTop: -20,marginLeft: -20});
+			}, function(){
+				$(this).find("img").animate({width:320,height: 192,marginTop: 0,marginLeft: 0});
+			})
+		
+    	})
+
+    </script>
+	</head>
+	<body>
+		    <div class="header_top">
+        <div class = "header_top1">
+            <div class = "header_top2">
+                <ul>
+                    <li><a href ="#"><img src = "img/zhuceyouli.gif" class="img1"></a></li>
+                    <li ><a href = "#" style="color:red">注册有礼</a><span>|</span></li>
+                    
+                    <li><a href = "#">登陆</a><span>|</span></li>
+                    
+                    <li><a href = "#">收藏</a></li>
+                </ul>
+                
+
+            </div>
+            <div class = "header_top3">
+                <ul>
+                    <li><a href = "#">在线咨询</a><span>|</span></li>
+                    
+                    <li><a href = "#">手机版</a><span>|</span></li>
+                    
+                    <li><a href = "#"><img src = "img/weiboss.gif" class="img2"></a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id = "header_center">
+        <div class = "header_center1">
+            <div class = "logo"><a href = "#"><img src = "img/logo_02.png"></a></div>
+            <div class = "logo_txt">
+            <p>全球奢品&nbsp;官方授权</p></div>
+        </div>
+        
+    </div>
+
+
+
+
+    <div id = "header_bottom">
+        <div class = "header_bottom1">
+            <ul class = "uli">
+                <li><a href = "#" style = "color: red; padding-left: 0px" class="mm">首页</a></li>
+                <li><a href="#">女士</a><div id = "div_nav1">
+                	<div class="div01"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div02"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#" class="mm">男士</a><div id = "div_nav2">
+                	<div class="div03"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div04"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                </div></li>
+                <li><a href="#" class="mm">美妆</a><div id = "div_nav3">
+                	<div class="div05"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div06"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#" class="mm">家居</a><div id = "div_nav4">
+                	<div class="div07"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div08"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#" class="mm">婴童</a><div id = "div_nav5">
+                	<div class="div09"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div10"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#" class="mm">老佛爷奥莱</a><div id = "div_nav6">
+                	<div class="div11"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                </div></li>
+                <li><a href="#" class="mm">即将推出</a></li>
+            </ul>
+            <div class="header_bottom2">
+               <!--  <img src = "img/1212.gif" class="shopping_tu"> -->
+                <span class="span1">|</span>
+                <span class="span2">￥0.00</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="shops">
+    	<div class="aa1">
+    		<div class="aa1-left">
+    			<p><span><a href="">首页</a></span> > <span><a href="">女士</a></span> ><span>TRUSSARDI</span></p>
+    		</div>
+    		<div class="aa1-right">
+    			123456
+    		</div>
+    	</div>
+    	
+    	<div class="ab" style="width: 1000px; height: 57px; margin: 0 auto;">
+    		<div class="ab_left" style="float: left; line-height: 57px;">
+    			TRUSSARDI 闪耀灵系列 10折
+    		</div>
+    		<div class="ab_right" style="float: right; line-height: 57px;">
+    			<a href="">+收藏品牌</a>
+    		</div>
+    	</div>
+    	
+    	<div class="ac">
+    		<p class="pp">购TRUSSARDI闪耀灵缇系列专场任意产品，即赠钥匙扣一个1个；数量有限，赠完即止<span><a href="">查看详情</a></span></p>
+    		<p class="pp">全场免运（海外直发商品除外）</p>
+    		
+    		<h4>品牌故事</h4>
+    		<p class="pp1">意大利时装以其优雅的设计、精美的面料、考究的裁剪和无可挑剔的质量见称。凭借高超的手工技术和卓绝品味，Trussardi品牌创始人Dante Trussardi先生于1911年在意大利贝加莫省（Bergamo）的阿尔梅市（Almè）开始经营自己的手套工厂。历经百年的成长，Trussardi品牌以其卓越的手套制造工艺成为了国际市场的潮流标准标。凭借创新的皮革加工技术和对高级面料的熟练运用，自Dante Trussardi 先生的孙子Nicola Trussardi接任以来，公司的业务扩展相当迅速，产品已出口至全世界。Trussardi品牌作为至高品质和优雅品味的代名词，充分彰显了品牌追求多元文化和其对美学价值的艺术表现。作为意大利时装的一个百年经典品牌，Trussardi不仅代表了一段家族企业的传奇经历，亦是一个融会创意的典范。百年后的今天，Trussardi在引领全球奢侈品界的同时，更将意大利的时尚精神演绎成为永恒经典。<span><a href="">更多</a></span></p>
+    	</div>
+    	
+    	<div class="ad">
+    		<ul class="ad0">
+    			
+    		</ul>
+    	</div>
+    </div>
+    
+    
+    
+    
+     <div class="footer">
+    	 <div class="footer_top">
+    	 	<ul>
+    	 		<li><a href="#" class="a1">100%品牌授权正版</a></li>
+    	 		<li><a href="#" class="a2">满688免运费</a></li>
+    	 		<li><a href="#" class="a3">7天无条件退货</a></li>
+    	 		<li><a href="#" class="a4">超值折扣</a></li>
+    	 		<li><a href="#" class="a5">9点限时闪购</a></li>
+    	 		<li><a href="#" id="a6">400-664-6698</a></li>
+    	 	</ul>
+    	 	
+    	 </div>
+    	 <p class="footer_center">
+    	 	<a href="#">关于魅力惠</a>
+    	 	<a href="#">加入我们</a>
+    	 	<a href="#">联系我们</a>
+    	 	<a href="#">使用帮助</a>
+    	 	<a href="#">使用规则</a>
+    	 	<a href="#">隐私声明</a>
+    	 	<a href="#">网站地图</a>
+    	 </p>
+    	 <p class="footer_center1">
+    	 	<span>COPYRIGHT©2016  杭州魅俪信息技术有限公司版权所有</span>&nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1
+    	 </p>
+    	 <div class="footer_bottom">
+    	 	<div class="div_t1"><a href="#"><img src="img/icon_badge.png" width="35" height="36" ></a></div>
+    	 	<div class="div_t2"><a href="#"><img src="img/icon_badge3.png" width="105" height="35" ></a></div>
+    	 </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>魅力惠时尚奢侈品牌闪购网站 奢侈品排行榜销售NO.1 2000多个国际品牌官方合作伙伴-魅力惠官方网站</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="css/css1.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src = "js/Mquery.js"></script>
+    <script type="text/javascript" src = "js/Mquery_animate.js"></script>
+    <script type="text/javascript" src = "js/perfect_startMove.js"></script>
+   
+    <script src="js/jquery-1.11.3.js"></script>
+     <script type="text/javascript" src = "js/jquery.cookie.js"> </script>
+    <!-- 轮播-->
+    <script type="text/javascript">
+        $().extend("size", function(){
+            return this.elements.length;
+        })
+    
+        $(function(){
+            var aBtn = $("#banner").find(".oli").find("li");
+            var oUl = $("#banner").find(".oUl");
+            var aLi = oUl.find("li");
+
+            var iNow = 0;
+            var timer = 0;
+
+            aBtn.click(function(){
+                iNow = $(this).index();
+                tab();
+            })
+            timer = setInterval(timerInner, 2000);
+            function timerInner(){
+                iNow++;
+                tab();
+            }
+
+            $("#banner").hover(function(){
+                clearInterval(timer);
+            },function(){
+                timer = setInterval(timerInner, 2000);
+            })
+
+            function tab(){
+                aBtn.attr("className", "");
+                aBtn.eq(iNow).attr("className", "active");
+                if(iNow == aLi.size() - 1){
+                    aBtn.eq(0).attr("className", "active");
+                }
+
+
+                oUl.animate({top: -524 * iNow}, function(){
+                    if(iNow == aLi.size() - 1){
+                        iNow = 0;
+                        oUl.css("top", 0);
+                    }
+                })
+            }
+        })
+    </script>
+
+
+    <!--导航josn-->
+    <script type="text/javascript">
+        window.onload = function(){
+        	window.onscroll = function(){
+        		var nav = document.getElementById("header_bottom");
+        		var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+	        	console.log(oTop);
+	        	if(oTop >= 120){
+	        		nav.style.position = "fixed";
+	        		nav.style.left = 0;
+	        		nav.style.top = 0;
+	        	}else{
+	        		nav.style.position = "relative";
+	        		//nav.style.top = "120px";
+	        	}
+        	}
+       	 }
+        $(function(){
+        	
+        	
+        	
+        	$("#header_bottom").find("li").hover(function(){
+        		$(this).find("div").css("display", "block");
+        		$(this).find(".mm").css("color", "red");
+        	},function(){
+        		$(this).find("div").css("display", "none");
+        		$(this).find(".mm").css("color", "white");
+        	}
+        	)
+        	
+        	$.ajax({
+        	type : "get",
+        	url : "json/1.json",
+        	success : function(data){
+        		
+        			for(var i = 0; i < data[0].child.length; i++){
+        			var $nav01 = $("<a href = '#' class='as'></a>");
+        			$nav01.html(data[0].child[i]);
+        			$("#div_nav1").find(".div01").append($nav01);
+        			}
+					//$("#div_nav1").find(".div01").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav02 = $("<a href = '#' class='as'></a>");
+        			$nav02.html(data[1].child[i]);
+        			$("#div_nav2").find(".div03").append($nav02);
+        			}
+					//$("#div_nav2").find(".div03").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav03 = $("<a href = '#' class='as'></a>");
+        			$nav03.html(data[2].child[i]);
+        			$("#div_nav3").find(".div05").append($nav03);
+        			}
+					//$("#div_nav3").find(".div05").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav04 = $("<a href = '#' class='as'></a>");
+        			$nav04.html(data[3].child[i]);
+        			$("#div_nav4").find(".div07").append($nav04);
+        			}
+					//$("#div_nav4").find(".div07").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav05 = $("<a href = '#' class='as'></a>");
+        			$nav05.html(data[4].child[i]);
+        			$("#div_nav5").find(".div09").append($nav05);
+        			}
+					//$("#div_nav5").find(".div09").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav06 = $("<a href = '#' class='as'></a>");
+        			$nav06.html(data[5].child[i]);
+        			$("#div_nav6").find(".div11").append($nav06);
+        			}
+					//$("#div_nav6").find(".div11").find("a").css("color", "black");
+        		}
+        	})
+        
+        })	
+    </script>
+    <!--用json插入商品--> 
+    <script>
+    	$(function(){
+    		$.getJSON("json/shoplist.json",function(data){
+			for(var i=0; i<data.length;i++){
+				if((i+1)%2==0){
+					var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}else{
+					var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}
+				
+				$("#list01").append(s);
+			}
+		});
+		
+		
+			$.getJSON("json/shoplist-2.json",function(data){
+				for(var i=0; i<data.length;i++){
+					if(i==2||i==5||i==8){
+						var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}else if(i==4||i==7 ||i==1){
+						var s=$('<li class="bott"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}	else{
+						var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}
+				
+				$("#list02").append(s);
+			}
+		});
+		
+			$.getJSON("json/shoplist-1.json",function(data){
+				for(var i=0; i<data.length;i++){
+					if(i==2||i==5||i==8){
+						var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}else if(i==4||i==7 ||i==1){
+						var s=$('<li class="bott"><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+					}else{
+						var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"><p>'+data[i].listname+'<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}
+				
+				$("#list03").append(s);
+			}
+			});		
+			
+			
+			$.getJSON("json/shoplist.json",function(data){
+			for(var i=0; i<data.length;i++){
+				if((i+1)%2==0){
+					var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}else{
+					var s=$('<li><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}
+				
+				$("#list04").append(s);
+			}
+			});
+			
+			$.getJSON("json/shoplist-6.json",function(data){
+			for(var i=0; i<data.length;i++){
+				if(i==2){
+					var s=$('<li class="ul-li"><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}else if(i==1){
+					var s=$('<li class="ul-li1"><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}else{
+					var s=$('<li class="ul-li2"><a href=""><img src="'+data[i].imgSrc+'"/><p>"'+data[i].listname+'"<span class="col">'+data[i].price+'</span><span>元起</span></p></a></li>');
+				}
+				
+				$("#list05").append(s);
+			}
+			
+			});
+			
+//			alert($(".sames").length)
+			
+			/*$(".sames").find("li").find("a").hover(function(){
+				$(this).find("img").animate({width:340,height: 200,marginTop: -20,marginLeft: -20});
+			}, function(){
+				$(this).find("img").animate({width:320,height: 192,marginTop: 0,marginLeft: 0});
+			})*/
+			
+    	})
+    </script>
+    
+    <!--商品效果-->
+    <script>
+
+    </script>
+<body>
+    <div class="header_top">
+        <div class = "header_top1">
+            <div class = "header_top2">
+                <ul>
+                    <li><a href ="#"><img src = "img/zhuceyouli.gif" class="img1"></a></li>
+                    <li ><a href = "#" style="color:red">注册有礼</a><span>|</span></li>
+                    
+                    <li><a href = "#">登陆</a><span>|</span></li>
+                    
+                    <li><a href = "#">收藏</a></li>
+                </ul>
+                
+
+            </div>
+            <div class = "header_top3">
+                <ul>
+                    <li><a href = "#">在线咨询</a><span>|</span></li>
+                    
+                    <li><a href = "#">手机版</a><span>|</span></li>
+                    
+                    <li><a href = "#"><img src = "img/weiboss.gif" class="img2"></a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id = "header_center">
+        <div class = "header_center1">
+            <div class = "logo"><a href = "#"><img src = "img/logo_02.png"></a></div>
+            <div class = "logo_txt">
+            <p>全球奢品&nbsp;官方授权</p></div>
+        </div>
+        
+    </div>
+
+
+
+
+    <div id = "header_bottom">
+        <div class = "header_bottom1">
+            <ul class = "uli">
+                <li><a href = "#" style = "color: red; padding-left: 0px">首页</a></li>
+                <li><a href="#">女士</a><div id = "div_nav1">
+                	<div class="div01"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div02"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">男士</a><div id = "div_nav2">
+                	<div class="div03"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div04"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                </div></li>
+                <li><a href="#">美妆</a><div id = "div_nav3">
+                	<div class="div05"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div06"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">家居</a><div id = "div_nav4">
+                	<div class="div07"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div08"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">婴童</a><div id = "div_nav5">
+                	<div class="div09"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div10"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">老佛爷奥莱</a><div id = "div_nav6">
+                	<div class="div11"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                </div></li>
+                <li><a href="#">即将推出</a></li>
+            </ul>
+            
+            
+
+            <div class="header_bottom2">
+               <!--  <img src = "img/1212.gif" class="shopping_tu"> -->
+                <span class="span1">|</span>
+                <span class="span2">￥0.00</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div id="banner">
+        <ol class="oli">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+        <ul class="oUl">
+            <li><a href="#"><img src = "img/lubo1.jpg"></a></li>
+            <li><a href="#"><img src = "img/lubo2.jpg"></a></li>
+            <li><a href="#"><img src = "img/lubo3.jpg"></a></li>
+            <li><a href="#"><img src = "img/lubo1.jpg"></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class = "goods_all">
+    	<div class="goods_1"></div>
+    	<div class="goods_2"><a href=""></a></div>
+    	
+    	
+    	
+    	<div class="title_1"><h2>[今日更新]</h2></div>	
+        <div id="all">
+
+        	<div class="goods_list-1">
+        		<div class="goods_list-1-left">
+        			<ul id="list01" class="sames">
+        				
+        			</ul>
+        		</div>
+        	
+        		<div class="list-big-1">
+        			<a href=""><img src="img/20160923181054703.jpg" /></a>
+        		</div>
+        			
+        		
+
+        	</div>
+        	<div class="goods_list-2">
+        		<ul id="list02" class="sames">
+        					
+        		</ul>
+        	</div>
+        	<div class="title_2"><h2>[活动热卖]</h2></div>	
+        	<div class="goods_list-3">
+        		<ul id = "list03" class="sames">
+        			
+        		</ul>
+        	</div>
+        	<div class="title_2"><h2>[男士热卖]</h2></div>
+        	<div class="goods_list-4">
+        		<div class="list-big-2">
+        			<a href=""><img src="img/20160923181054703.jpg" /></a>
+        		</div>
+        		<div class="goods_list-4-right">
+        			<ul id="list04" class="sames">
+        				
+        			</ul>
+        		</div>
+        		<div class="goods_list-4-bootm">
+        			<ul id="list05" class="sames">
+        			
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+    	<div class="goods_list-6">
+    		<h2>[活动即将开始]</h2>
+		<div class="goods_list-5">
+			<div class="goods_list-5-left">
+				<ul class="ul-li-1">
+					<li class="first"><a href="#">明天</a></li>
+					<li><a href="#">周四</a></li>
+					<li><a href="#">周五</a></li>
+					<li><a href="#">周六</a></li>
+					<li class="last"><a href="#">周日</a></li>
+				</ul>
+				<ul class="ul-li-2">
+					<li class="li-top">
+					<div class="zhemo"></div>
+					<div class="dinyue"><a class="diya">预览</a><a>订阅</a></div>
+					<img src="img/20160921175128304.jpg"/>
+					<p>LAURA BERNAL 女装</p>
+					<span>2</span>
+					折起</li>
+					<li class="li-top"><img src="img/20160920185615047.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li class="li-top"><img src="img/20160919185016256.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920185934486.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920104334746.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920185517978.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920185643415.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920104334746.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920185517978.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+					<li><img src="img/20160920185643415.jpg"/><p>LAURA BERNAL 女装</p><span>2</span>折起</li>
+				</ul>
+			</div>
+		</div>
+				
+		</div>
+    	</div>
+    	
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="footer">
+    	 <div class="footer_top">
+    	 	<ul>
+    	 		<li><a href="#" class="a1">100%品牌授权正版</a></li>
+    	 		<li><a href="#" class="a2">满688免运费</a></li>
+    	 		<li><a href="#" class="a3">7天无条件退货</a></li>
+    	 		<li><a href="#" class="a4">超值折扣</a></li>
+    	 		<li><a href="#" class="a5">9点限时闪购</a></li>
+    	 		<li><a href="#" id="a6">400-664-6698</a></li>
+    	 	</ul>
+    	 	
+    	 </div>
+    	 <p class="footer_center">
+    	 	<a href="#">关于魅力惠</a>
+    	 	<a href="#">加入我们</a>
+    	 	<a href="#">联系我们</a>
+    	 	<a href="#">使用帮助</a>
+    	 	<a href="#">使用规则</a>
+    	 	<a href="#">隐私声明</a>
+    	 	<a href="#">网站地图</a>
+    	 </p>
+    	 <p class="footer_center1">
+    	 	<span>COPYRIGHT©2016  杭州魅俪信息技术有限公司版权所有</span>&nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1
+    	 </p>
+    	 <div class="footer_bottom">
+    	 	<div class="div_t1"><a href="#"><img src="img/icon_badge.png" width="35" height="36" ></a></div>
+    	 	<div class="div_t2"><a href="#"><img src="img/icon_badge3.png" width="105" height="35" ></a></div>
+    	 </div>
+    </div>
+</body>
+</html>

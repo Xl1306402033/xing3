@@ -1,0 +1,237 @@
+#head,#log,#banner,#contact,#footer-link,#footer{
+	width: 1041px;
+	margin: 0 auto;
+}
+#head-wrap{
+	height: 40px;
+	background: #eee;
+	line-height: 40px;
+}
+#head{
+	
+	height: 40px;
+}
+#head ul{
+	float: right;
+}
+#head li{
+	float: left;
+	margin-right: 10px;
+}
+
+
+
+#log{
+	height: 78px;
+	background: white;
+}
+#log img{
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+.buzuo{
+	float: left;
+	margin-top: 8px;
+	margin-left: 100px;
+}
+.buzuo li{
+	float: left;
+	width: 130px;
+	margin-right: 20px;
+}
+.buzuo li div{
+	width: 60px;
+	height: 60px;
+	float: left;
+	border-radius: 50%;
+	background: #ccc;
+	text-align: center;
+	line-height: 60px;
+	font-size: 36px;
+	color: white;
+}
+.buzuo li span{
+	display: block;
+	float: left;
+	width: 70px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.buzuo .changered{
+	background: #DB2726;
+}
+
+.contact-top{
+	height: 50px;
+	padding-top: 20px;
+	font-size: 32px;
+	font-weight: normal;
+	text-indent: 15px;
+	border-bottom: 1px solid black;
+}
+.contact-1{
+	margin-top: 30px;
+}
+.contact-2{
+	margin-top: 10px;
+}
+.contact-2 span{
+	color: #DB2725;
+}
+.contact-3{
+	margin-top: 5px;
+	height: 50px;
+}
+.contact-3 span{
+	display: block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+}
+.contact-3 img{
+	display: block;
+	float: left;
+	border: 1px solid black;
+}
+.contact-5{
+	margin-top: 10px;
+	/*height: 112px;*/
+}
+.contact-5ul{
+	height: 30px;
+}
+.contact-5ul li{
+	float: left;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+.first{
+	border-left: 1px solid #ccc;
+}
+.pay-footer{
+	height: 80px;
+	border: 1px solid #ccc;
+}
+.pay-footer img{
+	display: block;
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.sures{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.sures span{
+	display: block;
+	width: 200px;
+	height: 40px;
+	background: #db2726;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+#footer-link-wrap{
+	background: #f2f2f2;
+	height: 90px;
+}
+#footer-link{
+	height: 90px;
+	background: #f2f2f2;
+	position: relative;
+}
+#footer-link ul{
+	position: absolute;
+	top: 30px;
+}
+#footer-link ul li{
+	position: relative;
+	float: left;
+	width: 165px;
+	height: 60px;
+	border-right: 1px solid #ccc;
+}
+#footer-link ul li span{
+	display: block;
+	width:165px;
+	height: 41px;
+}
+#footer-link ul li span img{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#footer-link ul li p{
+	width: 165px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+}
+
+
+
+
+
+
+#footer-wrap{
+	width: 100%;
+	height: 160px;
+	background: #f2f2f2;
+}
+#footer{
+	height: 160px;
+	background: #f2f2f2;
+	position: relative;
+}
+#footer ul{
+	position:absolute;
+	top:22px;
+	left: 25%;
+}
+#footer li{
+	float: left;
+	padding: 0 15px;
+}
+#footer div{
+	position: absolute;
+	top:70px;
+	left:25%;
+}
+#footer div p{
+	float: left;
+}
+#footer div span{
+	margin-left: 40px;
+	float: left;
+}
+#footer .tubiao{
+	position: absolute;
+	top:110px;
+}
+#footer .tubiao img{
+	display: block;
+	float: left;
+}
+#footer .img-1{
+	margin-left: 130px;
+}
+#footer .img-2{
+	margin-left: 25px;
+}

@@ -1,0 +1,182 @@
+
+* { padding: 0; margin: 0; }
+li { list-style: none; }
+img { border: none; }
+
+
+
+.oli { position: absolute; right: 5px; bottom: 5px; z-index: 10; }
+.oli li { float: left; margin-right: 3px; display: inline; cursor: pointer; background: #fcf2cf; border: 1px solid #f47500; padding: 2px 6px; color: #d94b01; font-family: arial; font-size: 12px; }
+.active { padding: 3px 8px; font-weight: bold; color: #ffffff; background: #ffb442; position: relative; bottom: 2px; }
+
+.oUl { position: absolute; top: 0; left: 0; z-index: -1; }
+.oUl li { width: 100%; height: 524px; float: left; }
+.oUl img { float: left; width: 100%; height: 524px; }
+
+#banner{width: 100% ; height: 524px; overflow: hidden;position: relative;z-index: 9; }
+
+
+
+.goods_all{width: 100%; height: 100%;}
+
+.goods_1{width: 1000px; height: 20px; margin: 0 auto;}
+
+.goods_2{width: 1000px; margin: 0 auto; height: 100px; background: url(../img/20160901095551104.jpg) no-repeat center center;}
+
+.goods_2 a{width: 1000px; height: 100px; display: block;}
+
+.title_1{ width: 1000px; height: 90px; margin: 0 auto;}
+.title_1 h2{padding-top: 55px;}
+
+
+.goods_list-1{width: 1000px; height: 524px; margin: 0 auto;}
+.goods_list-1-left{float: left; width: 660px; height: 524px;}
+.list-big-1{width:320px ; height: 514px; float: right;}
+
+#list01 li{float: left; margin-bottom: 20px; overflow: hidden;}
+/* #list01 li img{
+	display: block;
+    -webkit-transition:all 1s;
+	transition: all 1s;
+}
+#list01 li:hover img{
+	transform: scale(1.1);
+} */
+
+
+.ul-li{padding-left: 20px;}
+#list01 li p{width: 320px; height: 40px; background: #F2F2F2; line-height: 40px;}
+
+.goods_list-2{width: 1000px; height:680px ; margin: 0 auto;}
+#list02 li {float: left; margin-bottom: 20px;}
+
+.goods_list-2 .ul-li{float: right;}
+.bott{margin-left: 20px;}
+
+.title_2{ width: 1000px; height: 90px; margin: 0 auto;}
+.title_2 h2{padding-top: 55px;}
+
+.goods_list-3{width: 1000px; height: 680px; margin: 0 auto;}
+#list03 li{float: left; margin-bottom: 20px;}
+
+.goods_list-4{width: 1000px; height: 730px; margin: 0 auto;}
+.list-big-2{width:320px ; height: 450px; float: left; margin-bottom: 20px}
+.goods_list-4-right{float: right; width: 660px; height: 500px;}
+#list04 li{float: left; margin-bottom: 20px;}
+#list04 li p{width: 320px; height: 40px; background: #F2F2F2; line-height: 40px;}
+
+
+.goods_list-4-bootm{width: 1000px; height: 360px; margin: 0 auto; overflow: hidden;}
+#list05 li{float: left; margin-bottom: 20px; }
+#list05 .ul-li1{float: right;}
+
+#list05 .ul-li{float: left; }
+
+
+.goods_list-6{width: 1000px; margin: 0 auto;}
+.goods_list-5-left .ul-li-1{
+	margin-top: 20px;
+	margin-left: 20px;
+	height: 25px;
+}
+
+.goods_list-5-left .ul-li-1 li {
+	
+	width: 90px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-left: 1px solid #000;	
+	display: block;
+	float: left;
+}
+.goods_list-5-left .ul-li-1 li a{
+	text-decoration: none;
+	color: #000000;
+}
+.goods_list-5-left .ul-li-1 .last{
+	border-right: 1px solid #000;
+}
+.goods_list-5-left .ul-li-1 .first{
+	border-bottom: 5px solid #000;
+}
+.goods_list-5-left .ul-li-2{
+	margin-bottom: 20px;
+}
+.goods_list-5-left .ul-li-2 li{
+	background: #f2f2f2;
+	width: 305px;
+	height: 90px;
+	border: 1px solid #ccc;
+	margin: 0 20px 20px 5px;
+	float: left;
+	color: red;
+	position: relative;
+}
+.goods_list-5-left .ul-li-2 .li-top{
+	margin-top: 10px;
+}
+.goods_list-5-left .ul-li-2  img{
+	float: left;
+	width: 150px;
+	height: 90px;
+}
+.goods_list-5-left .ul-li-2 p{
+	display: block;
+	margin-top: 14px;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	width: 150px;
+	color: #000;
+}
+.goods_list-5-left .ul-li-2 span{
+	display: inline-block;
+	margin-top: 18px;
+	margin-left: 10px;
+	font-size: 24px;
+	color: red;
+}
+.goods_list-5-left .ul-li-2 .zhemo{
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:0;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+}
+.goods_list-5-left .ul-li-2 .dinyue{
+	position: absolute;
+	color: white;
+	background: #db2726;
+	left:50% ;
+	top: 50%;
+	margin-left: -60px;
+	margin-top:-15px;
+}
+.goods_list-5-left .ul-li-2 .dinyue a{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	
+	line-height: 30px;
+	text-align: center;
+}
+.goods_list-5-left .ul-li-2 .dinyue .diya{
+	border-right: 1px solid white;
+}
+
+
+
+#all li{
+	overflow: hidden;
+}
+#all li img{
+	display: block;
+    -webkit-transition:all 1s;
+	transition: all 1s;
+}
+#all li:hover img {
+    transform: scale(1.1);
+}

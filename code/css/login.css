@@ -1,0 +1,236 @@
+
+body{
+	background-image: url('http://cdn11.mei.com/images/login/photo_03.png');
+	background-repeat:repeat-x;
+}
+
+
+#login{
+	width: 1000px;
+	height: 832px;
+	background: url(../img/20160407180825169.png@1000w_827h_2e_100q.jpg) no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+}
+	
+#head{
+	width: 369px;
+	height: 36px;
+	margin: 0 auto;
+	margin-top:30px;
+	cursor: pointer;
+}
+#content{
+	width: 950px;
+	height: 650px;
+	overflow: hidden;
+}
+#content .login-main{
+	float: right;
+	width: 350px;
+	height: auto;
+	margin-top: 60px;
+	margin-right: 150px;
+	overflow: hidden;
+}
+.hydl_regsiter{
+	margin-left: 90px;
+	height: 31px;
+}
+.hydl_regsiter h2{
+	font-size: 16px;
+	font-weight: bold;
+	float: left;
+}
+.hydl_regsiter span{
+	display: block;
+	float: right;
+	margin-top: 2px;
+}
+.hydl_regsiter a{
+	font-size: 14px;
+    color: #db2725;
+    text-decoration: underline
+}
+.hydl_loginbar ul li{
+	height: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 350px;
+    text-align: left;
+}
+.hydl_loginbar span{
+	float: left;
+    width: 75px;
+    margin-right: 15px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+.hydl_loginbar input{
+	width: 253px;
+	background: #eee;
+    padding-left: 5px;
+    height: 28px;
+    border: 1px solid #999;
+    color: #999;
+    line-height: 28px;
+    float: left;
+}
+.hydl_loginbar p{
+	color: #db2725;
+    margin-left: 90px;
+    margin-top: 30px;
+}
+.hydl_loginbar .input-1{
+	display: block;
+	float: left;
+	width: 110px;
+}
+.hydl_loginbar .input-2{
+	display: block;
+	float: right;
+	width: 115px;
+	border: 1px solid #ccc;
+	margin-right: 0;
+	font-size: 12px;
+	text-align: center;
+}
+#idcode{
+	font-size: 16px;
+	letter-spacing: 5px;
+}
+.hydl_btn {
+    width: 260px;
+    height: 35px;
+    overflow: hidden;
+    margin-left: 90px;
+}
+.hydl_btn a {
+    display: block;
+    background-color: #db2725;
+    width: 260px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    font-size: 14px;
+}
+.hydl_check{
+	margin-top: 10px;
+	width: 350px;
+	height: 16px;
+	line-height: 16px;
+}
+.hydl_check span{
+	float: left;
+	display: block;
+	margin-left: 90px;
+	font-size: 12px;
+}
+.hydl_check a{
+	display: block;
+	font-size: 12px;
+	float: right;
+	text-decoration: underline;	
+}
+.hydl_partner{
+	width: 350px;
+	height: 17px;
+	margin-top: 20px;
+}
+.hydl_partner h4 {
+    width: 75px;
+    float: left;
+    text-align: right;
+    margin-right: 15px;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 14px;
+}
+a.weibo {
+    width: 20px;
+    height: 17px;
+    overflow: hidden;
+    background: url(http://cdn11.mei.com/images/login/icon_weibo.png) no-repeat;
+    float: left;
+    margin: 0 25px 0 0;
+    cursor: pointer;
+    display: inline;
+}
+a.zhifubao {
+    width: 44px;
+    height: 17px;
+    overflow: hidden;
+    margin-top: 2px;
+    background: url(http://cdn11.mei.com/images/login/icon_zhifubao.png) no-repeat;
+    float: left;
+    margin: 0 25px 0 0;
+    cursor: pointer;
+    display: inline;
+}
+.xian {
+    background-color: #a8aaab;
+    width: 350px;
+    height: 1px;
+    margin-left: 0;
+    overflow: hidden;
+    margin-top: 19px;
+}
+.erweima {
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.erweima img{
+	float: left;
+}
+.erweima p {
+	font-size: 12px;
+    line-height: 20px;
+    margin-top: 16px;
+    float: right;
+    margin-right: 18px;
+}
+#footer-link{
+	position: relative;
+}
+#footer-link ul{
+	position: absolute;
+}
+#footer-link ul li{
+	position: relative;
+	float: left;
+	width: 165px;
+	height: 60px;
+	border-right: 1px solid #ccc;
+}
+#footer-link ul li span{
+	display: block;
+	width:165px;
+	height: 41px;
+}
+#footer-link ul li span img{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#footer-link ul li p{
+	width: 165px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+}
+#footer-link .footer_copyright{
+	display: block;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	margin-left: 150px;
+	top:70px;
+	font-size: 14px;
+}

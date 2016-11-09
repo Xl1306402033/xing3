@@ -1,0 +1,692 @@
+.col{
+	color: red;
+	font-size: 24px;
+}
+
+
+#top,#head,#log,#banner,#contact,#footer-link,#footer{
+	width: 1041px;
+	margin: 0 auto;
+}
+
+#top-wrap{
+	height: 30px;
+	background: #f2f2f2;
+}
+
+#top{
+	height: 30px;
+	background: #f2f2f2;
+}
+#top .left-1{
+	float: left;
+}
+#top .right-1{
+	float: left;
+	margin-left: 600px;
+}
+#top ul li{
+	font-size: 12px;
+	float: left;
+	height: 20px;
+	margin-top: 5px;
+	padding: 0 5px;
+	line-height: 20px;
+}
+#top .img-a img{
+	display: block;
+	float: left;
+}
+#top .img-a a{
+	display: block;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+#head-wrap{
+	background: black;
+	position: relative;
+	width: 100%;
+	z-index: 99;
+}
+#head{
+	height: 42px;
+	background: black;
+}
+#head .nav{
+	font-size: 14px;
+	float: left;
+	width: 740px;
+	list-style: none;
+	padding-top: 16px;
+}
+#head .nav li a{
+	float: left;
+	text-decoration: none;
+	padding: 0 25px;
+	color: white;
+}
+#head .nav li a:hover{
+	color:#d70000;
+}
+#head .nav .first a{
+	padding-left: 20px;
+	color: #d70000;
+}
+#head .nav .last a{
+	border-right: 1px solid white;
+}
+#head .right-nav{
+	position: relative;
+	float: right;
+	width: 131px;
+	height: 42px;
+	background: url(../img/base_z.png) no-repeat;
+}
+#head .right-nav a{
+	display: block;
+	position: absolute;
+	float: left;
+	color: white;
+	width: 23px;
+	height: 22px;
+	line-height: 26px;
+	text-align: center;
+	left: 0;
+	top: 8px;
+	text-decoration: none;
+	background: url(../img/1212.gif) no-repeat ;
+}
+#head .right-nav span{
+	display:block;
+	width: 74px;
+	position: absolute;
+	right: 0;
+	top: 8px;
+	height: 22px;
+	padding-left: 16px;
+	line-height: 22px;
+	border-left: 3px solid white;
+	color: white;
+	font-size: 12px;
+}
+
+
+
+#contact-wrap{
+	/*height:1000px;*/
+	position: relative;
+}
+#contact{
+	height: 600px;
+	position: relative;
+}
+.contact-1{
+	margin-top: 10px;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid black;
+}
+.contact-1 span{
+	font-size: 24px;
+}
+
+.contact-2 {
+	width: 160px;
+	height:500px;
+	padding-left: 20px;
+	float: left;
+
+}
+.contact-2 ul{
+	width: 150px;
+	margin-top: 30px;
+}
+.contact-2 li{
+	width: 100px;
+	height: 50px;
+}
+.contact-2 li span{
+	display: block;
+	text-align: center;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+}
+#all-li{
+	width: 800px;
+	height: 550px;
+	float: left;
+	overflow: hidden;
+}
+#all-li li{
+	width: 800px;
+	height: 550px;
+}
+#all-li li h5{
+	width: 800px;
+	height: 550px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 550px;
+}
+
+#all-li .contact-3{
+	width: 800px;
+	height: 550px;
+}
+.masg{
+	/*width: 800px;
+	height: 550px;*/
+	padding-top: 30px;
+	padding-left: 100px;
+}
+.masg h4{
+	height: 30px;
+	line-height: 30px;
+}
+.nickname span{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+}
+.nickname input{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+}
+.sex{
+	height: 30px;
+}
+.sex div{
+	float: left;
+}
+.sex span{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+}
+.sex a{
+	display: inline-block;
+	margin-left: 20px;
+}
+.sex input{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-top: 15px;
+}
+.phone{
+	margin-top: 10px;
+}
+.phone span{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+}
+.phone input{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 5px;
+}
+
+.people{
+	margin-top: 10px;
+}
+.people label{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	float: left;
+}
+.people input{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+
+
+
+.dizhi{
+	margin-top: 10px;
+}
+.dizhi label{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	float: left;
+}
+.dizhi input{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	margin-left: 5px;
+}
+.youbian{
+	margin-top: 10px;
+}
+.youbian label{
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	float: left;
+}
+.youbian input{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.huan{
+	width: 200px;
+	height: 40px;
+	background: #DB2725;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+
+
+
+#all-li .contact-3-div{
+	padding-top: 30px;
+	padding-left: 100px;
+}
+.contact-3-div h4{
+	height: 30px;
+	line-height: 30px;
+}
+.contact-3-div h4 span{
+	display: inline-block;
+	margin-left: 40px;
+}
+.contact-3-1{
+	margin-top: 10px;
+}
+.contact-3-1 span{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+.contact-3-1 input{
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+}
+
+.contact-3-2{
+	margin-top: 10px;
+}
+.contact-3-2 span{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+.contact-3-2 input{
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+}
+
+.contact-3-3{
+	overflow: hidden;
+	margin-top: 5px;
+	margin-left: 105px;
+}
+.contact-3-3 span{
+	display: block;
+	float: left;
+	width: 66px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background: #eee;
+	border: 1px solid #ccc;
+}
+.contact-3-3 .reds{
+	background: red;
+}
+.contact-3-4{
+	margin-top: 10px;
+}
+.contact-3-4 span{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+.contact-3-4 input{
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+}
+
+.contact-3-5 input{
+	display: block;
+	background: #DD2828;
+	width: 120px;
+	height: 30px;
+	font-size: 16px;
+	color: white;
+	border: none;
+}
+
+.contact-3-5{
+	margin-top: 10px;
+	margin-left:110px;
+}
+
+
+.colors{
+	color: white;
+	text-align: center;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	background: #DD2828;
+}
+/*.white{
+	background: white;
+}
+.heise{
+	background: black;
+}
+
+.orange{
+	background: orange;
+}
+.green{
+	background: green;
+}
+
+.yellow{
+	background: yellow;
+}*/
+
+.addss{
+	width: 100%;
+	height: 100%;
+}
+.addss h2{
+	width: 200px;
+	text-align: center;
+	margin-left: 35%;
+	padding-top: 20px;
+	letter-spacing: 5px;
+}
+.addss label{
+	width: 120px;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: right;
+}
+.getman{
+	margin-left:15%;
+	margin-top: 30px;
+	overflow: hidden;
+}
+.addss label{
+	float: left;
+}
+.getman input{
+	display: block;
+	float: left;
+	width: 382px;
+	height: 30px;
+}
+.numphone{
+	margin-left:15%;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.numphone label{
+	float: left;
+}
+.numphone input{
+	display: block;
+	float: left;
+	width: 382px;
+	height: 30px;
+}
+
+.addrs{
+	margin-left:15%;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.addrs a{ color:#006600; text-decoration:none;}
+.addrs a:hover{color:#990000;}
+.addrs-sheng{
+	float: left;
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+	margin-right: 10px;	
+}
+.sheng{
+	display: block;	
+	width: 120px;
+	height: 30px;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+
+.addrs-shi{
+	float: left;
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+	margin-right: 10px;	
+}
+.shi{
+	display: block;
+	
+	width: 120px;
+	height: 30px;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+.addrs-xian{
+	float: left;
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+}
+.xian{
+	display: block;	
+	width: 120px;
+	height: 30px;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+
+.xiangadd{
+	margin-left:15%;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.xiangadd label{
+	float: left;
+}
+.xiangadd input{
+	display: block;
+	float: left;
+	width: 382px;
+	height: 30px;
+}
+.bianma{
+	margin-left:15%;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.bianma label{
+	float: left;
+	height: 30px;
+	overflow: hidden;
+}
+.bianma input{
+	display: block;
+	float: left;
+	width: 382px;
+	height: 30px;
+	overflow: hidden;
+}
+.bianma span{
+	display: block;
+	width: 100%;
+	height: 16px;
+}
+.tishi{
+	margin-left: 30%;
+}
+.sure{
+	height: 30px;
+	width: 382px;
+	margin-top: 15px;
+	margin-left: 30%;
+	border: 1px solid #4C4C4C;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+}
+.checked{
+	margin-left: 43%;
+	margin-top: 10px;
+}
+
+
+
+
+#footer-link-wrap{
+	background: #f2f2f2;
+	height: 90px;
+}
+#footer-link{
+	height: 90px;
+	background: #f2f2f2;
+	position: relative;
+}
+#footer-link ul{
+	position: absolute;
+	top: 30px;
+}
+#footer-link ul li{
+	position: relative;
+	float: left;
+	width: 165px;
+	height: 60px;
+	border-right: 1px solid #ccc;
+}
+#footer-link ul li span{
+	display: block;
+	width:165px;
+	height: 41px;
+}
+#footer-link ul li span img{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#footer-link ul li p{
+	width: 165px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+}
+
+
+
+
+
+
+#footer-wrap{
+	width: 100%;
+	height: 160px;
+	background: #f2f2f2;
+}
+#footer{
+	height: 160px;
+	background: #f2f2f2;
+	position: relative;
+}
+#footer ul{
+	position:absolute;
+	top:22px;
+	left: 25%;
+}
+#footer li{
+	float: left;
+	padding: 0 15px;
+}
+#footer div{
+	position: absolute;
+	top:70px;
+	left:25%;
+}
+#footer div p{
+	float: left;
+}
+#footer div span{
+	margin-left: 40px;
+	float: left;
+}
+#footer .tubiao{
+	position: absolute;
+	top:110px;
+}
+#footer .tubiao img{
+	display: block;
+	float: left;
+}
+#footer .img-1{
+	margin-left: 130px;
+}
+#footer .img-2{
+	margin-left: 25px;
+}
+
+
+

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>魅力惠时尚奢侈品牌闪购网站 奢侈品排行榜销售NO.1 2000多个国际品牌官方合作伙伴-魅力惠官方网站</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="css/css1.css">
+	<link rel="stylesheet" type="text/css" href="css/myshop.css">
+	<link rel="stylesheet" type="text/css" href="css/commen.css">
+   <!-- <script type="text/javascript" src = "jq/Mquery.js"></script>
+    <script type="text/javascript" src = "jq/Mquery_animate.js"></script>
+    <script type="text/javascript" src = "jq/perfect_startMove.js"></script>-->
+   
+    <!-- 轮播-->
+    
+
+
+    <!--导航josn-->
+    <script type="text/javascript">
+        window.onload = function(){
+        	window.onscroll = function(){
+        		var nav = document.getElementById("header_bottom");
+        		var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+	        	/*console.log(oTop);*/
+	        	if(oTop >= 120){
+	        		nav.style.position = "fixed";
+	        		nav.style.left = 0;
+	        		nav.style.top = 0;
+	        	}else{
+	        		nav.style.position = "relative";
+	        		//nav.style.top = "120px";
+	        	}
+        	}
+       	 }
+        $(function(){
+        	
+        	
+        	
+        	$("#header_bottom").find("li").hover(function(){
+        		$(this).find("div").css("display", "block");
+        		$(this).find(".mm").css("color", "red");
+        	},function(){
+        		$(this).find("div").css("display", "none");
+        		$(this).find(".mm").css("color", "white");
+        	}
+        	)
+        	
+        	$.ajax({
+        	type : "get",
+        	url : "json/1.json",
+        	success : function(data){
+        		
+        			for(var i = 0; i < data[0].child.length; i++){
+        			var $nav01 = $("<a href = '#' class='as'></a>");
+        			$nav01.html(data[0].child[i]);
+        			$("#div_nav1").find(".div01").append($nav01);
+        			}
+					//$("#div_nav1").find(".div01").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav02 = $("<a href = '#' class='as'></a>");
+        			$nav02.html(data[1].child[i]);
+        			$("#div_nav2").find(".div03").append($nav02);
+        			}
+					//$("#div_nav2").find(".div03").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav03 = $("<a href = '#' class='as'></a>");
+        			$nav03.html(data[2].child[i]);
+        			$("#div_nav3").find(".div05").append($nav03);
+        			}
+					//$("#div_nav3").find(".div05").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav04 = $("<a href = '#' class='as'></a>");
+        			$nav04.html(data[3].child[i]);
+        			$("#div_nav4").find(".div07").append($nav04);
+        			}
+					//$("#div_nav4").find(".div07").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav05 = $("<a href = '#' class='as'></a>");
+        			$nav05.html(data[4].child[i]);
+        			$("#div_nav5").find(".div09").append($nav05);
+        			}
+					//$("#div_nav5").find(".div09").find("a").css("color", "black");
+					
+					
+					for(var i = 0; i < data[0].child.length; i++){
+        			var $nav06 = $("<a href = '#' class='as'></a>");
+        			$nav06.html(data[5].child[i]);
+        			$("#div_nav6").find(".div11").append($nav06);
+        			}
+					//$("#div_nav6").find(".div11").find("a").css("color", "black");
+        		}
+        	})
+        
+        })	
+    </script>
+
+			
+
+    
+
+<body>
+    <div class="header_top">
+        <div class = "header_top1">
+            <div class = "header_top2">
+                <ul>
+                    <li><a href ="#"><img src = "img/zhuceyouli.gif" class="img1"></a></li>
+                    <li ><a href = "#" style="color:red">注册有礼</a><span>|</span></li>
+                    
+                    <li><a href = "#">登陆</a><span>|</span></li>
+                    
+                    <li><a href = "#">收藏</a></li>
+                </ul>
+                
+
+            </div>
+            <div class = "header_top3">
+                <ul>
+                    <li><a href = "#">在线咨询</a><span>|</span></li>
+                    
+                    <li><a href = "#">手机版</a><span>|</span></li>
+                    
+                    <li><a href = "#"><img src = "img/weiboss.gif" class="img2"></a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id = "header_center">
+        <div class = "header_center1">
+            <div class = "logo"><a href = "#"><img src = "img/logo_02.png"></a></div>
+            <div class = "logo_txt">
+            <p>全球奢品&nbsp;官方授权</p></div>
+        </div>
+        
+    </div>
+
+
+
+
+    <div id = "header_bottom">
+        <div class = "header_bottom1">
+            <ul class = "uli">
+                <li><a href = "#" style = "color: red; padding-left: 0px">首页</a></li>
+                <li><a href="#">女士</a><div id = "div_nav1">
+                	<div class="div01"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div02"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">男士</a><div id = "div_nav2">
+                	<div class="div03"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div04"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                </div></li>
+                <li><a href="#">美妆</a><div id = "div_nav3">
+                	<div class="div05"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div06"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">家居</a><div id = "div_nav4">
+                	<div class="div07"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div08"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">婴童</a><div id = "div_nav5">
+                	<div class="div09"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                	<div class="div10"><h6>商品分类</h6>
+                		<ul>
+                			<li><a href="" class='as'>眼镜</a></li><br />
+                			<li><a href="" class='as'>服装</a></li><br />
+                			<li><a href="" class='as'>鞋履</a></li><br />
+                			<li><a href="" class='as'>配饰</a></li><br />
+                			<li><a href="" class='as'>包装</a></li><br />
+                			<li><a href="" class='as'>手表&首饰</a></li>
+                			
+                		</ul>
+                	</div>
+                </div></li>
+                <li><a href="#">老佛爷奥莱</a><div id = "div_nav6">
+                	<div class="div11"><h6>热门活动</h6>
+                		<p><a href="#">查看所有活动</a></p>
+                	</div>
+                </div></li>
+                <li><a href="#">即将推出</a></li>
+            </ul>
+            
+            
+
+            <div class="header_bottom2">
+               <!--  <img src = "img/1212.gif" class="shopping_tu"> -->
+                <span class="span1">|</span>
+                <span class="span2">￥0.00</span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact-wrap">
+			<div id="contact">
+				<div id="contact-top">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li>
+							<span>></span>
+							<a href="#">女士</a>
+						</li>
+						<li>
+							<span>></span>
+							<a href="#">DVF</a>
+						</li>
+						<li>
+							<span>></span>
+							<a href="#">白色大雁图案半身裙  - 商品代码 ：DV2-151-00013</a>
+						</li>
+					</ul>
+					<p><img src="" /><span></span></p>
+					
+				</div>
+				<div id="contact-middle">
+					<div id="contact-middle-left">
+						<div id="box-1">
+							<ul id="list" class="middle-pic">
+								<li><img src="img/a-1.jpg" /></li>
+								<li><img src="img/a-2.jpg" /></li>
+								<li><img src="img/a-3.jpg" /></li>
+								<li><img src="img/a-4.jpg" /></li>
+							</ul>
+						</div>
+						<div class="find">
+							
+						</div>
+
+						<ul id="list2" class="small-pic">
+							<li><img src="img/b-1.jpg"/></li>
+							<li><img src="img/b-2.jpg"/></li>
+							<li><img src="img/b-3.jpg"/></li>
+							<li><img src="img/b-4.jpg"/></li>
+						</ul>
+					</div>
+					<div id="bigsmall">
+						<div class="big-ul-li">
+							<ul class="big-ul">
+								<li id="bigsmall-1"><img src="img/big-1.jpg" /></li>
+								<!--<li><img src="img/big-2.jpg" /></li>
+								<li><img src="img/big-3.jpg" /></li>
+								<li><img src="img/big-4.jpg" /></li>-->
+							</ul>
+						</div>
+					</div>
+					<div id="contact-middle-right">
+						<div class="middle-right-1"><span>free people</span></div>
+						<h1 class="middle-right-2">蓝色金属纽扣插袋短款牛仔外套</h1>
+						<div class="middle-right-3">
+							<div class="product_price">
+								<span class="product_price-1">￥</span>
+								<span class="product_price-2">710</span>
+							</div>
+							<div class="product_oldprice">
+								<span class="product_oldprice-1">￥</span>
+								<span class="product_oldprice-2">1415</span>
+							</div>
+							<div class="product_discount">
+								<span class="product_discount-1">5.1</span>
+								<span class="product_discount-2">折</span>
+							</div>
+							
+						</div>
+						<div class="middle-right-4">
+							<div class="box_effect_content">
+								<div class="box_effect_content-left">
+									<span>购FREE PEOPLE 女装-秋季焕新专场任意产品，满1000元，减100元；满2000元，减200元 </span>
+								</div>
+								<div class="box_effect_content-right">
+									<a href="#">展开</a>
+									<span>共<strong>	2</strong>项，</span>
+								</div>
+							</div>
+						</div>
+						<div class="middle-right-5">
+							<div class="product_choose_title">颜色:<strong>蓝色</strong><span id="chosColor" style="visibility:hidden;">请选择颜色</span>
+							<ul class="product_choose_color_ul">
+								<li><a id="2041204199000148543" href="#" title="蓝色" class="colorselected">
+                                                <img src="img/a-1.jpg">
+                                                <span>蓝色</span>
+                                    </a>
+								</li>
+							</ul>	
+								
+							</div>
+						</div>
+						<div class="middle-right-6">
+							<div class="product_choose_title">
+					        			选择尺码
+					            <span id="chosSize" style="visibility:hidden;">请选择合适的尺码</span>
+					        </div>
+					        <ul id="product_choose_size_ul">
+					        	<li><a class="class-bs">XS</a></li>
+					        	<li><a>S</a></li>
+					        	<li><a>M</a></li>
+					        	<li><a>L</a></li>
+					        </ul>
+						</div>
+						<div class="middle-right-7">
+							<div class="product_choose_title">数量</div>
+							<div class="number_choose">
+							    <span id="countReduce" class="number_reduce_none">-</span>
+							    <span class="quantity_number">
+							    <input type="text" value="1" id="quantity" >
+							    </span>
+							    <span id="countAdd" class="number_increase">+</span>
+							</div>
+
+							<div class="middle-right-8">预计出库日期:
+					            <span id="endtime">
+					                2016-11-01
+					            </span>
+					        </div>
+
+						<div class="middle-right-9">
+							<a class="join_shopping_bag"><span>加入购物袋</span></a>
+						</div>
+						<div class="middle-right-10">
+							<span class="countdown_label">
+								<strong>限时抢购</strong>
+								<em id="countdownStatus">活动剩余</em>
+							</span>
+							<div class="countdown_Time" id="spanTimer"><strong><em id="countdownDD"></em><del></del></strong><span>天</span><strong><em id="countdownHH"></em><del></del></strong><span>时</span><strong><em id="countdownMM"></em><del></del></strong><span>分</span><strong><em id="countdownSS"></em><del></del></strong><span>秒</span></div>
+						</div>
+						<div class="middle-right-11">
+							<span class="real100">官方授权正品</span>
+							<span class="rma7days">7天无理由退货</span>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+			<div id="info-form">
+				<div id="info-white"></div>
+				<h2 id="info-white-top">
+					<strong>size info</strong>
+					<span>尺寸信息</span>
+				</h2>
+				<div id="info-white-size">
+					<span class="span-1">单位: CM</span>
+					<table class="size_table_head">
+						<tbody>
+							<tr>
+								<th>品牌尺寸</th>
+							</tr>
+							<tr>
+								<th>规格型号</th>
+							</tr>
+							<tr>
+								<th>衣长</th>
+							</tr>
+							<tr>
+								<th>胸围</th>
+							</tr>
+							<tr>
+								<th>腰围</th>
+							</tr>
+							<tr>
+								<th>肩宽</th>
+							</tr>
+							<tr>
+								<th>袖长</th>
+							</tr>
+							<tr>
+								<th>下摆</th>
+							</tr>
+						</tbody>
+					</table>
+					<table class="size_table_body">
+						<tbody>
+							<tr class="yanse">
+								<td>XS</td>
+								<td>S</td>
+								<td>M</td>
+								<td>L</td>
+							</tr>
+							<tr>
+								<td>168/88A</td>
+								<td>170/92A</td>
+								<td>170/96A</td>
+								<td>170/100A</td>
+							</tr>
+							<tr class="yanse">
+								<td>52</td>
+								<td>53</td>
+								<td>54</td>
+								<td>55</td>
+							</tr>
+							<tr>
+								<td>86</td>
+								<td>90</td>
+								<td>94</td>
+								<td>98</td>
+							</tr>
+							<tr class="yanse">
+								<td>84</td>
+								<td>88</td>
+								<td>92</td>
+								<td>96</td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td>39</td>
+								<td>40</td>
+								<td>41</td>
+							</tr>
+							<tr class="yanse">
+								<td>61</td>
+								<td>62</td>
+								<td>63</td>
+								<td>64</td>
+							</tr>
+							<tr>
+								<td>84</td>
+								<td>88</td>
+								<td>92</td>
+								<td>96</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+				
+			</div>
+		</div>
+    
+    </div>
+ 
+    
+    
+    
+    
+    
+    
+    <div class="footer">
+    	 <div class="footer_top">
+    	 	<ul>
+    	 		<li><a href="#" class="a1">100%品牌授权正版</a></li>
+    	 		<li><a href="#" class="a2">满688免运费</a></li>
+    	 		<li><a href="#" class="a3">7天无条件退货</a></li>
+    	 		<li><a href="#" class="a4">超值折扣</a></li>
+    	 		<li><a href="#" class="a5">9点限时闪购</a></li>
+    	 		<li><a href="#" id="a6">400-664-6698</a></li>
+    	 	</ul>
+    	 	
+    	 </div>
+    	 <p class="footer_center">
+    	 	<a href="#">关于魅力惠</a>
+    	 	<a href="#">加入我们</a>
+    	 	<a href="#">联系我们</a>
+    	 	<a href="#">使用帮助</a>
+    	 	<a href="#">使用规则</a>
+    	 	<a href="#">隐私声明</a>
+    	 	<a href="#">网站地图</a>
+    	 </p>
+    	 <p class="footer_center1">
+    	 	<span>COPYRIGHT©2016  杭州魅俪信息技术有限公司版权所有</span>&nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1
+    	 </p>
+    	 <div class="footer_bottom">
+    	 	<div class="div_t1"><a href="#"><img src="img/icon_badge.png" width="35" height="36" ></a></div>
+    	 	<div class="div_t2"><a href="#"><img src="img/icon_badge3.png" width="105" height="35" ></a></div>
+    	 </div>
+    </div>
+    
+    <div id="buy">
+			<img src="img/buy.png" />
+	</div>
+	<div id="succese">
+		<div class="success-top"><span>×</span></div>
+		<div class="success-content">
+			<div>
+				<img src="img/success.png" />
+				<span>加入购物车成功</span>
+			</div>
+		</div>
+		<div class="success-footer">
+			<div class="pay-1">继续购物</div>
+			<div class="pay-2">立即结账</div>
+		</div>
+	</div>
+	<div id="fugai"></div>
+</body>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src = "js/jquery.cookie.js"> </script>
+    <script type="text/javascript" src="js/product.js" ></script>		
+	<script type="text/javascript" src="js/buy.js" ></script>
+	<script src="js/smlllunbo.js"></script>
+</html>

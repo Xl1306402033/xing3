@@ -1,0 +1,81 @@
+[{
+	"title" : "热门活动",
+	"child" : [
+		"秋之奢华 买手精选最IN女士上衣",
+		"秋之风尚 买手精选女士浪漫裙裤装",
+		"秋之闪耀 买手精选女士时尚鞋包配件",
+		"M&E 质感女士羊绒精品",
+		"DOLCE＆GABBANA 女士包袋配饰搭配",
+		"DOLCE＆GABBANA 都市奢华女装专场",
+		"DOLCE＆GABBANA 华美意式风尚女士",
+		"DOLCE＆GABBANA 意式奢华女士鞋履"
+		]
+	},
+	{
+		"title" : "热门活动",
+		"child" : [
+			"秋之帅气 买手精选男士型格单品",
+			"PAUL SMITH 英式优雅男女服饰配件",
+			"PS BY PAUL SMITH 男士服装配件",
+			"M&E 质感男士羊绒精品",
+			"DOLCE&GABBANA  男士包袋配饰搭配",
+			"DOLCE＆GABBANA 都市奢华男装专场",
+			"DOLCE＆GABBANA 意式经典男士系列",
+			"DOLCE＆GABBANA 意式奢华男士鞋履"
+		]
+	},
+	{
+		"title" : "热门活动",
+		"child" : [
+			"DAVINES 意大利小众品牌护发专场（满减）",
+			"MARGRETE GAULTIER&PRICE'S 英国现代护肤香氛",
+			"DIEGO DALLA PALMA 意大利时尚彩妆",
+			"KATE 日本潮流彩妆",
+			"万圣节派对女王 妆容造型专场",
+			"韩方秀发护理 洗护专场",
+			"TRILOGY 趣乐活新西兰有机护肤",
+			"有机草本 天然植物护肤"
+		]
+	},
+	{
+		"title" : "热门活动",
+		"child" : [
+			"SHERWOOD 澳洲羊毛暖芯",
+			"SHERWOOD 澳洲舒适生活",
+			"FIORA & IMM LIVING 居家装饰",
+			"PUMEI 日本生态家居",
+			"SHERIDAN 澳洲家居",
+			"TERRY PALMER 进口毛浴巾",
+			"数码产品 精选",
+			"PERFECT PILLOW 泰国乳胶枕"
+		]
+	},
+	{
+		"title" : "热门活动",
+		"child" : [
+			"DOLCE＆GABBANA 婴童系列",
+			"IKKS 经典优雅童装",
+			"SCHWARTZ 法国轻奢童装",
+			"REIMA 芬兰功能性 配饰专场",
+			"REIMA 芬兰功能性 童装专场",
+			"PAUL FRANK 潮童童鞋",
+			"JACADI 法式浪漫 女童专场",
+			"JACADI 法式浪漫 男童专场"
+		]
+	},
+	{
+		"title" : "热门活动",
+		"child" : [
+			"老佛爷百货  女士上装",
+			"老佛爷百货  女士裤装",
+			"老佛爷百货 女士裙装",
+			"老佛爷百货  女士鞋履",
+			"老佛爷百货  女士包袋配饰",
+			"老佛爷百货 男士上装",
+			"老佛爷百货 男士下装",
+			"老佛爷百货 男士鞋履"
+		]
+	}
+	
+]
+    

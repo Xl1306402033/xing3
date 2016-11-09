@@ -1,0 +1,30 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+.shops{width: 100%; height: 100%;}
+.aa1{width: 1000px; height: 57px; border-bottom: 1px solid #F2F2F2; margin: 0 auto;}
+.aa1-left{float: left; line-height: 57px; width: 400px;}
+.aa1-right{float: right; line-height: 57px; width: 400px;}
+
+.ac{width: 1000px; height: 252px; margin: 0 auto; border: 1px solid #F2F2F2;}
+
+.pp{line-height: 40px; font-size: 12px; margin-top: 10px; margin-left: 10px;}
+.ac h4{margin-left: 10px;}
+.pp1{line-height: 24px; font-size: 10px; margin-left: 10px;}
+
+
+.ad{width: 1000px; margin: 0 auto;}
+
+.ad0 li{margin: 20px 6px; float: left;}
+.ad0 li p {z-index: 2;}
+.ad0 li{
+	overflow: hidden;
+}
+.ad0 li img{
+	display: block;
+    -webkit-transition:all 1s;
+	transition: all 1s;
+}
+.ad0 li:hover img {
+    transform: scale(1.1);
+}
